@@ -48,6 +48,9 @@
 #include <zstd.h>
 #include <stdio.h>
 #endif
+#ifdef HAVE_ZXC_H
+#include <zxc.h>
+#endif
 #ifdef HAVE_LZO_LZOCONF_H
 #include <lzo/lzoconf.h>
 #endif
@@ -172,6 +175,7 @@ archive_version_details(void)
 	const char *bzlib = archive_bzlib_version();
 	const char *liblz4 = archive_liblz4_version();
 	const char *libzstd = archive_libzstd_version();
+	const char *libzxc = archive_libzxc_version();
 	const char *liblzo = archive_liblzo2_version();
 	const char *libiconv = archive_libiconv_version();
 	const char *libacl = archive_libacl_version();
@@ -205,6 +209,10 @@ archive_version_details(void)
 		if (libzstd) {
 			archive_strcat(&str, " libzstd/");
 			archive_strcat(&str, libzstd);
+		}
+		if (libzxc) {
+			archive_strcat(&str, " libzxc/");
+			archive_strcat(&str, libzxc);
 		}
 		if (liblzo) {
 			archive_strcat(&str, " liblzo2/");
@@ -302,6 +310,16 @@ archive_libzstd_version(void)
 	snprintf(zstd_version, 9, "%d.%d.%d", major.quot, minor.quot, minor.rem);
 	return zstd_version;
 #endif
+#else
+	return NULL;
+#endif
+}
+
+const char *
+archive_libzxc_version(void)
+{
+#if HAVE_ZXC_H && HAVE_LIBZXC
+	return zxc_version_string();
 #else
 	return NULL;
 #endif

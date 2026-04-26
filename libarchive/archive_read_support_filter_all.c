@@ -72,6 +72,8 @@ archive_read_support_filter_all(struct archive *a)
 	archive_read_support_filter_lz4(a);
 	/* Zstd falls back to "zstd -d -qq" command-line. */
 	archive_read_support_filter_zstd(a);
+	/* Zxc falls back to "zxc -d" command-line program. */
+	archive_read_support_filter_zxc(a);
 
 	/* Note: We always return ARCHIVE_OK here, even if some of the
 	 * above return ARCHIVE_WARN.  The intent here is to enable

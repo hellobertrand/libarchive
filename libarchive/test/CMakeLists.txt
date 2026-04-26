@@ -287,6 +287,7 @@ IF(ENABLE_TEST)
     test_write_filter_uuencode.c
     test_write_filter_xz.c
     test_write_filter_zstd.c
+    test_write_filter_zxc.c
     test_write_format_7zip.c
     test_write_format_7zip_empty.c
     test_write_format_7zip_large.c
