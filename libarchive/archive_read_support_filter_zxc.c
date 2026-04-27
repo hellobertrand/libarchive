@@ -201,6 +201,11 @@ zxc_filter_read(struct archive_read_filter *self, const void **p)
 	out.pos = 0;
 
 	for (;;) {
+		if (zxc_dstream_finished(state->ds)) {
+			*p = NULL;
+			return (0);
+		}
+
 		src = __archive_read_filter_ahead(self->upstream, 1, &avail_in);
 		if (avail_in < 0)
 			return (avail_in);

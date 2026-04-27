@@ -19,7 +19,7 @@ BuildRequires:  libattr-devel
 BuildRequires:  libtool
 BuildRequires:  libxml2-devel
 BuildRequires:  libzstd-devel
-BuildRequires:  libzxc-devel
+# BuildRequires:  libzxc-devel  # Uncomment when libzxc is packaged in Fedora/RHEL
 BuildRequires:  lz4-devel
 BuildRequires:  lzo-devel
 BuildRequires:  openssl-devel
