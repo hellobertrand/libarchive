@@ -28,6 +28,7 @@ IF(ENABLE_CPIO AND ENABLE_TEST)
     test_extract_cpio_lzo.c
     test_extract_cpio_xz.c
     test_extract_cpio_zstd.c
+    test_extract_cpio_zxc.c
     test_format_newc.c
     test_gcpio_compat.c
     test_missing_file.c
@@ -59,6 +60,7 @@ IF(ENABLE_CPIO AND ENABLE_TEST)
     test_option_y.c
     test_option_z.c
     test_option_zstd.c
+    test_option_zxc.c
     test_owner_parse.c
     test_passthrough_dotdot.c
     test_passthrough_reverse.c

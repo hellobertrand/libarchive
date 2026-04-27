@@ -1377,6 +1377,7 @@ bsdtar_test_EXTRA_DIST= \
 	tar/test/test_extract.tar.lz.uu \
 	tar/test/test_extract.tar.lz4.uu \
 	tar/test/test_extract.tar.zst.uu \
+	tar/test/test_extract.tar.zxc.uu \
 	tar/test/test_extract.tar.lzma.uu \
 	tar/test/test_extract.tar.lzo.uu \
 	tar/test/test_extract.tar.xz.uu \
@@ -1535,6 +1536,7 @@ bsdcpio_test_EXTRA_DIST= \
 	cpio/test/test_extract.cpio.lz.uu \
 	cpio/test/test_extract.cpio.lz4.uu \
 	cpio/test/test_extract.cpio.zst.uu \
+	cpio/test/test_extract.cpio.zxc.uu \
 	cpio/test/test_extract.cpio.lzma.uu \
 	cpio/test/test_extract.cpio.lzo.uu \
 	cpio/test/test_extract.cpio.xz.uu \
@@ -1655,12 +1657,14 @@ bsdcat_test_EXTRA_DIST= \
 	cat/test/test_empty.gz.uu \
 	cat/test/test_empty.lz4.uu \
 	cat/test/test_empty.zst.uu \
+	cat/test/test_empty.zxc.uu \
 	cat/test/test_empty.xz.uu \
 	cat/test/test_expand.Z.uu \
 	cat/test/test_expand.bz2.uu \
 	cat/test/test_expand.gz.uu \
 	cat/test/test_expand.lz4.uu \
 	cat/test/test_expand.zst.uu \
+	cat/test/test_expand.zxc.uu \
 	cat/test/test_expand.plain.uu \
 	cat/test/test_expand.xz.uu \
 	cat/test/CMakeLists.txt
