@@ -16,6 +16,7 @@ IF(ENABLE_CAT AND ENABLE_TEST)
     test_empty_lz4.c
     test_empty_xz.c
     test_empty_zstd.c
+    test_empty_zxc.c
     test_error.c
     test_error_mixed.c
     test_expand_Z.c
@@ -26,6 +27,7 @@ IF(ENABLE_CAT AND ENABLE_TEST)
     test_expand_plain.c
     test_expand_xz.c
     test_expand_zstd.c
+    test_expand_zxc.c
     test_help.c
     test_stdin.c
     test_version.c
