@@ -385,6 +385,14 @@ In extract or list modes, this option is ignored.
 Note that this
 .Nm tar
 implementation recognizes zstd compression automatically when reading archives.
+.It Fl Fl zxc
+(c mode only)
+Compress the archive with zxc compression before writing it
+.Pq see Xr zxc 1 .
+In extract or list modes, this option is ignored.
+Note that this
+.Nm tar
+implementation recognizes zxc compression automatically when reading archives.
 .It Fl Fl lzma
 (c mode only) Compress the resulting archive with the original LZMA algorithm.
 In extract or list modes, this option is ignored.

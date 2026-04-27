@@ -109,6 +109,7 @@ The library also detects and handles any of the following before evaluating the 
   * lz4 compression
   * lzop compression
   * zstandard compression
+  * zxc compression
 
 The library can create archives in any of the following formats:
 
@@ -143,6 +144,7 @@ When creating archives, the result can be filtered with any of the following:
   * lz4 compression
   * lzop compression
   * zstandard compression
+  * zxc compression
 
 ## Notes about the Library Design
 

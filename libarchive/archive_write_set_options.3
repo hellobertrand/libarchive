@@ -265,6 +265,24 @@ number of threads for multi-threaded zstd compression.
 If set to 0, zstd will attempt to detect and use the number
 of active physical CPU cores.
 .El
+.It Filter zxc
+.Bl -tag -compact -width indent
+.It Cm compression-level
+The value is interpreted as a decimal integer specifying the
+compression level. Supported values are 1 (fastest) through 5
+(highest density). The default is 3.
+.It Cm checksum
+Boolean. When set to
+.Dq 1 ,
+.Dq on ,
+or
+.Dq yes
+(default), per-block and global checksums are emitted in the archive
+and verified on decompression. Set to
+.Dq 0
+to disable for slightly faster encoding at the cost of integrity
+verification.
+.El
 .It Format 7zip
 .Bl -tag -compact -width indent
 .It Cm compression

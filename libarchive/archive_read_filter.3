@@ -37,6 +37,7 @@
 .Nm archive_read_support_filter_uu ,
 .Nm archive_read_support_filter_xz ,
 .Nm archive_read_support_filter_zstd ,
+.Nm archive_read_support_filter_zxc ,
 .Nm archive_read_support_filter_program ,
 .Nm archive_read_support_filter_program_signature
 .Nd functions for reading streaming archives
@@ -76,6 +77,8 @@ Streaming Archive Library (libarchive, -larchive)
 .Ft int
 .Fn archive_read_support_filter_zstd "struct archive *"
 .Ft int
+.Fn archive_read_support_filter_zxc "struct archive *"
+.Ft int
 .Fo archive_read_support_filter_program
 .Fa "struct archive *"
 .Fa "const char *cmd"
@@ -104,6 +107,7 @@ Streaming Archive Library (libarchive, -larchive)
 .Fn archive_read_support_filter_uu ,
 .Fn archive_read_support_filter_xz ,
 .Fn archive_read_support_filter_zstd ,
+.Fn archive_read_support_filter_zxc ,
 .Xc
 Enables auto-detection code and decompression support for the
 specified compression.
