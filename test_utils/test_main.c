@@ -2618,6 +2618,11 @@ CAN_RUN_FUNC(Lz4, "lz4 --help")
 CAN_RUN_FUNC(Zstd, "zstd --help")
 
 /*
+ * Can this platform run the zxc program?
+ */
+CAN_RUN_FUNC(Zxc, "zxc --help")
+
+/*
  * Can this platform run the lzip program?
  */
 CAN_RUN_FUNC(Lzip, "lzip --help")

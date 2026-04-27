@@ -76,6 +76,7 @@ IF(ENABLE_TAR AND ENABLE_TEST)
     test_option_xz.c
     test_option_z.c
     test_option_zstd.c
+    test_option_zxc.c
     test_patterns.c
     test_print_longpath.c
     test_stdio.c

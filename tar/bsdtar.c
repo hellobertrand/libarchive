@@ -490,6 +490,7 @@ main(int argc, char **argv)
 		case OPTION_LZMA: /* GNU tar beginning with 1.20 */
 		case OPTION_LZOP: /* GNU tar beginning with 1.21 */
 		case OPTION_ZSTD:
+		case OPTION_ZXC:
 			if (compression != '\0')
 				lafe_errc(1, 0,
 				    "Can't specify both -%c and -%c", opt,
@@ -502,6 +503,7 @@ main(int argc, char **argv)
 			case OPTION_LZMA: compression_name = "lzma"; break;
 			case OPTION_LZOP: compression_name = "lzop"; break;
 			case OPTION_ZSTD: compression_name = "zstd"; break;
+			case OPTION_ZXC:  compression_name = "zxc"; break;
 			}
 			break;
 		case 'm': /* SUSv2 */

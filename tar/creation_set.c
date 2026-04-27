@@ -62,6 +62,7 @@ get_filter_code(const char *suffix)
 		{ ".uu",	"uuencode" },
 		{ ".xz",	"xz" },
 		{ ".zst",	"zstd"},
+		{ ".zxc",	"zxc"},
 		{ NULL,		NULL }
 	};
 
@@ -104,6 +105,7 @@ decompose_alias(const char *suffix)
 		{ ".taZ",	".tar.Z" },
 		{ ".tZ",	".tar.Z" },
 		{ ".tzst",	".tar.zst" },
+		{ ".tzxc",	".tar.zxc" },
 		{ NULL,		NULL }
 	};
 

@@ -61,6 +61,9 @@ struct { const char *name; int (*format)(struct archive *); int (*filter)(struct
 	{ ".tar.gz",	archive_write_set_format_pax_restricted,  archive_write_add_filter_gzip},
 	{ ".tar.bz2",	archive_write_set_format_pax_restricted,  archive_write_add_filter_bzip2},
 	{ ".tar.xz",	archive_write_set_format_pax_restricted,  archive_write_add_filter_xz},
+	{ ".tar.zst",	archive_write_set_format_pax_restricted,  archive_write_add_filter_zstd},
+	{ ".tar.zxc",	archive_write_set_format_pax_restricted,  archive_write_add_filter_zxc},
+	{ ".tzxc",	archive_write_set_format_pax_restricted,  archive_write_add_filter_zxc},
 	{ NULL,		NULL,                             NULL }
 };
 
