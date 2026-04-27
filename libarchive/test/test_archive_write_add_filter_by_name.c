@@ -204,3 +204,8 @@ DEFINE_TEST(test_archive_write_add_filter_by_name_zstd)
 {
 	test_filter_by_name("zstd", ARCHIVE_FILTER_ZSTD, canZstd);
 }
+
+DEFINE_TEST(test_archive_write_add_filter_by_name_zxc)
+{
+	test_filter_by_name("zxc", ARCHIVE_FILTER_ZXC, canZxc);
+}

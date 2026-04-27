@@ -276,6 +276,7 @@ main(int argc, char *argv[])
 		case OPTION_LZMA: /* GNU tar, others */
 		case OPTION_LZOP: /* GNU tar, others */
 		case OPTION_ZSTD:
+		case OPTION_ZXC:
 			cpio->compress = opt;
 			break;
 		case 'm': /* POSIX 1997 */
@@ -565,6 +566,9 @@ mode_out(struct cpio *cpio)
 		break;
 	case OPTION_ZSTD:
 		r = archive_write_add_filter_zstd(cpio->archive);
+		break;
+	case OPTION_ZXC:
+		r = archive_write_add_filter_zxc(cpio->archive);
 		break;
 	case 'j': case 'y':
 		r = archive_write_add_filter_bzip2(cpio->archive);

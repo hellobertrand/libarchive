@@ -197,6 +197,7 @@ libarchive_la_SOURCES= \
 	libarchive/archive_read_support_filter_uu.c \
 	libarchive/archive_read_support_filter_xz.c \
 	libarchive/archive_read_support_filter_zstd.c \
+	libarchive/archive_read_support_filter_zxc.c \
 	libarchive/archive_read_support_format_7zip.c \
 	libarchive/archive_read_support_format_all.c \
 	libarchive/archive_read_support_format_ar.c \
@@ -236,6 +237,7 @@ libarchive_la_SOURCES= \
 	libarchive/archive_write_add_filter_uuencode.c \
 	libarchive/archive_write_add_filter_xz.c \
 	libarchive/archive_write_add_filter_zstd.c \
+	libarchive/archive_write_add_filter_zxc.c \
 	libarchive/archive_write_disk_posix.c \
 	libarchive/archive_write_disk_set_standard_lookup.c \
 	libarchive/archive_write_open_fd.c \
@@ -658,6 +660,7 @@ libarchive_test_SOURCES= \
 	libarchive/test/test_write_filter_uuencode.c \
 	libarchive/test/test_write_filter_xz.c \
 	libarchive/test/test_write_filter_zstd.c \
+	libarchive/test/test_write_filter_zxc.c \
 	libarchive/test/test_write_format_7zip.c \
 	libarchive/test/test_write_format_7zip_empty.c \
 	libarchive/test/test_write_format_7zip_large.c \
@@ -1286,6 +1289,7 @@ bsdtar_test_SOURCES= \
 	tar/test/test_extract_tar_lzo.c \
 	tar/test/test_extract_tar_xz.c \
 	tar/test/test_extract_tar_zstd.c \
+	tar/test/test_extract_tar_zxc.c \
 	tar/test/test_format_newc.c \
 	tar/test/test_help.c \
 	tar/test/test_leading_slash.c \
@@ -1335,6 +1339,7 @@ bsdtar_test_SOURCES= \
 	tar/test/test_option_xz.c \
 	tar/test/test_option_z.c \
 	tar/test/test_option_zstd.c \
+	tar/test/test_option_zxc.c \
 	tar/test/test_patterns.c \
 	tar/test/test_print_longpath.c \
 	tar/test/test_stdio.c \
@@ -1463,6 +1468,7 @@ bsdcpio_test_SOURCES= \
 	cpio/test/test_extract_cpio_lzo.c \
 	cpio/test/test_extract_cpio_xz.c \
 	cpio/test/test_extract_cpio_zstd.c \
+	cpio/test/test_extract_cpio_zxc.c \
 	cpio/test/test_format_newc.c \
 	cpio/test/test_gcpio_compat.c \
 	cpio/test/test_missing_file.c \
@@ -1494,6 +1500,7 @@ bsdcpio_test_SOURCES= \
 	cpio/test/test_option_y.c \
 	cpio/test/test_option_z.c \
 	cpio/test/test_option_zstd.c \
+	cpio/test/test_option_zxc.c \
 	cpio/test/test_owner_parse.c \
 	cpio/test/test_passthrough_dotdot.c \
 	cpio/test/test_passthrough_reverse.c
@@ -1607,6 +1614,7 @@ bsdcat_test_SOURCES= \
 	cat/test/test_empty_lz4.c \
 	cat/test/test_empty_xz.c \
 	cat/test/test_empty_zstd.c \
+	cat/test/test_empty_zxc.c \
 	cat/test/test_error.c \
 	cat/test/test_error_mixed.c \
 	cat/test/test_expand_Z.c \
@@ -1617,6 +1625,7 @@ bsdcat_test_SOURCES= \
 	cat/test/test_expand_plain.c \
 	cat/test/test_expand_xz.c \
 	cat/test/test_expand_zstd.c \
+	cat/test/test_expand_zxc.c \
 	cat/test/test_help.c \
 	cat/test/test_stdin.c \
 	cat/test/test_version.c

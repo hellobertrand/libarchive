@@ -99,6 +99,7 @@ enum {
 	OPTION_UUENCODE,
 	OPTION_VERSION,
 	OPTION_ZSTD,
+	OPTION_ZXC,
 };
 
 int	cpio_getopt(struct cpio *cpio);

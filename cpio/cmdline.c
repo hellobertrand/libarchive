@@ -78,6 +78,7 @@ static const struct option {
 	{ "version",			0, OPTION_VERSION },
 	{ "xz",				0, 'J' },
 	{ "zstd",			0, OPTION_ZSTD },
+	{ "zxc",			0, OPTION_ZXC },
 	{ NULL, 0, 0 }
 };
 

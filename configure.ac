@@ -503,6 +503,14 @@ if test "x$with_zstd" != "xno"; then
     AC_DEFINE([HAVE_ZSTD_minCLevel], [1], [Define to 1 if you have a `zstd' library version with ZSTD_minCLevel().]))
 fi
 
+AC_ARG_WITH([zxc],
+  AS_HELP_STRING([--without-zxc], [Don't build support for zxc through libzxc]))
+
+if test "x$with_zxc" != "xno"; then
+  AC_CHECK_HEADERS([zxc.h])
+  AC_CHECK_LIB(zxc,zxc_compress)
+fi
+
 AC_ARG_WITH([lzma],
   AS_HELP_STRING([--without-lzma], [Don't build support for xz through lzma]))
 
