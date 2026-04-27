@@ -1,3 +1,8 @@
+Apr 27, 2026: Add support for zxc compression and decompression filter
+              (libzxc).  Includes streaming push API integration, bsdtar
+              `--zxc` option, bsdcpio `--zxc` option, and `.tar.zxc` /
+              `.tzxc` auto-detection by extension.
+
 May 20, 2025: libarchive 3.8.0 released
 
 Mar 30, 2025: libarchive 3.7.9 released
