@@ -508,7 +508,7 @@ AC_ARG_WITH([zxc],
 
 if test "x$with_zxc" != "xno"; then
   AC_CHECK_HEADERS([zxc.h])
-  AC_CHECK_LIB(zxc,zxc_compress)
+  AC_CHECK_LIB(zxc,zxc_cstream_create)
 fi
 
 AC_ARG_WITH([lzma],
