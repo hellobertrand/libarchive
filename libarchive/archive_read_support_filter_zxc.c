@@ -167,7 +167,7 @@ zxc_bidder_init(struct archive_read_filter *self)
 	}
 	/* Pre-size output to one default block; grown lazily after the file
 	 * header is parsed (zxc_dstream_out_size returns 0 until then). */
-	state->out_cap = 256 * 1024;
+	state->out_cap = ZXC_BLOCK_SIZE_DEFAULT;
 	state->out_buf = malloc(state->out_cap);
 	if (state->out_buf == NULL) {
 		zxc_dstream_free(state->ds);

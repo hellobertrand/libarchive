@@ -266,7 +266,7 @@ archive_compressor_zxc_open(struct archive_write_filter *f)
 	if (data->out_buf == NULL) {
 		data->out_cap = zxc_cstream_out_size(data->cs);
 		if (data->out_cap == 0)
-			data->out_cap = 256 * 1024;
+			data->out_cap = ZXC_BLOCK_SIZE_DEFAULT;
 		data->out_buf = malloc(data->out_cap);
 		if (data->out_buf == NULL) {
 			archive_set_error(f->archive, ENOMEM,
