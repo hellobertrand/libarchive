@@ -72,7 +72,7 @@ struct private_data {
 /* Default range when libzxc is not available at compile time. */
 #define ZXC_CLEVEL_MIN 1
 #define ZXC_CLEVEL_DEFAULT 3
-#define ZXC_CLEVEL_MAX 5
+#define ZXC_CLEVEL_MAX 6
 
 static int archive_compressor_zxc_options(struct archive_write_filter *,
 		    const char *, const char *);
@@ -221,8 +221,6 @@ zxc_drain(struct archive_write_filter *f, struct private_data *data,
 		out.size = data->out_cap;
 		out.pos = 0;
 		if (finalising) {
-			zxc_inbuf_t empty = { NULL, 0, 0 };
-			(void)empty;
 			r = zxc_cstream_end(data->cs, &out);
 		} else {
 			zxc_inbuf_t empty = { NULL, 0, 0 };

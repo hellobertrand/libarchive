@@ -107,7 +107,7 @@ DEFINE_TEST(test_write_filter_zxc)
 
 	/*
 	 * Option validation: bad keys / out-of-range values must be rejected,
-	 * the documented valid range (1..5) must be accepted.
+	 * the documented valid range (1..6) must be accepted.
 	 */
 	assert((a = archive_write_new()) != NULL);
 	assertEqualIntA(a, ARCHIVE_OK, archive_write_set_format_ustar(a));
@@ -125,7 +125,7 @@ DEFINE_TEST(test_write_filter_zxc)
 	assertEqualIntA(a, ARCHIVE_OK,
 	    archive_write_set_filter_option(a, NULL, "compression-level", "1"));
 	assertEqualIntA(a, ARCHIVE_OK,
-	    archive_write_set_filter_option(a, NULL, "compression-level", "5"));
+	    archive_write_set_filter_option(a, NULL, "compression-level", "6"));
 	assertEqualIntA(a, ARCHIVE_OK,
 	    archive_write_open_memory(a, buff, buffsize, &used2));
 	assert((ae = archive_entry_new()) != NULL);

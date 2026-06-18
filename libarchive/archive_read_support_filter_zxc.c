@@ -165,8 +165,8 @@ zxc_bidder_init(struct archive_read_filter *self)
 		    "Can't allocate zxc decompression stream");
 		return (ARCHIVE_FATAL);
 	}
-	/* Pre-size output to one default block; grown lazily after the file
-	 * header is parsed (zxc_dstream_out_size returns 0 until then). */
+	/* Fixed staging buffer; the decoder drains each block incrementally,
+	 * so its size never limits correctness. */
 	state->out_cap = ZXC_BLOCK_SIZE_DEFAULT;
 	state->out_buf = malloc(state->out_cap);
 	if (state->out_buf == NULL) {
